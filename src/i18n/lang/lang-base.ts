@@ -1,0 +1,127 @@
+export type langType = {
+  title: string;
+  taizhou:string;
+  predicting:string;
+  home:{
+    coming:string;
+    develop:string;
+  }
+  tabbar: {
+    home: string;
+    input: string;
+    analysis: string;
+    detail:string;
+    detailform:string;
+    detailinput;
+    error;
+    loading;
+  };
+  language: {
+    en: string;
+    zh: string;
+  };
+  btn: {
+    confirm: string;
+    cancel: string;
+    opsuccess:string;
+    plsfill1:string;
+    plsfill2:string;
+    plsfill3:string;
+    noinfo:string;
+    notproday:string;
+  };
+  predict:{
+    phd:string;
+    pop:string;
+    note:string;
+    ptt:string;
+    pwha:string;
+    ptha:string;
+    ns:string;
+    pe:string;
+    nodata:string;
+    wrongdata:string;
+    modelerror:string;
+    others:string;
+    dataic:string;
+    oventem:string;
+    oventemdetail:string;
+    more:string;
+    roomtem:string;
+    roomhum:string;
+    lastclose:string;
+    watr:string;
+    yes:string;
+    no:string;
+    aoti:string;
+    today:string;
+    totfplc:string;
+    rwna:string;
+    tsp:string;
+    lsp:string;
+    ptf:string;
+    submit:string;
+    tbupdated:string;
+    opentime:string;
+    feedback;
+  };
+  input:{
+    pti:string;
+    sevengenerate:string;
+    date:string;
+    time:string;
+    action:string;
+    edit:string;
+    save:string;
+    cancel:string;
+    pls:string;
+    reason:string;
+    datechoose:string;
+    timechoose:string;
+    confirm:string;
+    delete:string;
+    addsucceed:string;
+    savesucceed:string;
+  };
+  analysispage:{
+    choose:string;
+    today:string;
+    start:string;
+    end:string;
+    pr:string;
+    ovens:string;
+    es:string;
+    aratio:string;
+    emt:string;
+    glfxd:string;
+    areport:string;
+    ph:string;
+    ct:string;
+    cdsid:string;
+    edit:string;
+    last7:string;
+    last30:string;
+    last3m:string;
+    latest7r:string;
+    latest30r:string;
+    latest3mr:string;
+    date:string;
+    pt:string;
+    diff:string;
+    accept:string;
+    error:string;
+    yes:string;
+    download:string;
+    email:string;
+    result:string;
+  };
+  week:{
+    mon:string;
+    tue:string;
+    wed:string;
+    thu:string;
+    fri:string;
+    sat:string;
+    sun:string;
+  }
+};
