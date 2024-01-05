@@ -38,13 +38,14 @@
 
   const showBorder = ref(true);
 
-  const { t } = useI18n();
+  // const { t } = useI18n();
 
   watch(
     () => router,
     () => {
-      const judgeRoute = tabItem.some((item) => item.key === router.currentRoute.value.path.replace('/', ''));
+      const judgeRoute = tabItem.some((item) => item.key !== "detail"&& item.key !== "detailform");
       activeTab.value = tabItem.findIndex((item) => item.key === router.currentRoute.value.path.replace('/', ''));
+      
       tabbarVisible.value = judgeRoute;
       showBorder.value = judgeRoute;
     },

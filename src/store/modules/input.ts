@@ -248,34 +248,34 @@ export const usePlanListStore = defineStore('planlist',{
       ;
     },
 
-    addblankplan(adddays:number){
-      const len = this.plansnew.length;
-      const maxdate = this.plansnew[len-1]['plan_date'];
+    // addblankplan(adddays:number){
+    //   const len = this.plansnew.length;
+    //   const maxdate = this.plansnew[len-1]['plan_date'];
 
-      for (var j=0;j< adddays;j++){ 
-        const Adddatelist = [{},];
-        Adddatelist[j] = 
-        {
-          "id":  null,
-          "site": params.site,
-          "shop": params.shop,
-          "oven_type": params.oven_type,
-          "plan_date": (getNextDate(maxdate,j+1)),
-          "plan_time": '',
-          "noedit":false,
-          "action":'save'
-        };
-        this.plansnew.push(Adddatelist[j]);
-      }
-      function getNextDate(date, day) { 
-        var dd = new Date(date);
-        dd.setDate(dd.getDate() + day);
-        var y = dd.getFullYear();
-        var m = dd.getMonth() + 1 < 10 ? "0" + (dd.getMonth() + 1) : dd.getMonth() + 1;
-        var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();
-        return y + "-" + m + "-" + d;
-        };
-    },
+    //   for (var j=0;j< adddays;j++){ 
+    //     const Adddatelist = [{},];
+    //     Adddatelist[j] = 
+    //     {
+    //       "id":  null,
+    //       "site": params.site,
+    //       "shop": params.shop,
+    //       "oven_type": params.oven_type,
+    //       "plan_date": (getNextDate(maxdate,j+1)),
+    //       "plan_time": '',
+    //       "noedit":false,
+    //       "action":'save'
+    //     };
+    //     this.plansnew.push(Adddatelist[j]);
+    //   }
+    //   function getNextDate(date, day) { 
+    //     var dd = new Date(date);
+    //     dd.setDate(dd.getDate() + day);
+    //     var y = dd.getFullYear();
+    //     var m = dd.getMonth() + 1 < 10 ? "0" + (dd.getMonth() + 1) : dd.getMonth() + 1;
+    //     var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();
+    //     return y + "-" + m + "-" + d;
+    //     };
+    // },
 
     
     addeditblankplan(adddays:number, defaulttime){

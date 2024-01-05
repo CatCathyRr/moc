@@ -7,7 +7,7 @@
         <h3> {{ $t('input.pti') }}</h3>
       </div>
     </div>
-    <div style="margin-top: 20px;padding: 16px;background-color:white ;border-radius: 5px;color: #000000; text-align: center; height: 72vh;">
+    <div style="margin-top: 20px;padding: 16px;background-color:white ;border-radius: 5px;color: #000000; text-align: center; height: fit-content;">
   <!-- 选择烘房 -->
   <div style=" text-align: center">
     <div style="padding: 5px 30px; display: flex; justify-content: center">

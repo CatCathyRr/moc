@@ -8,7 +8,7 @@ store.use(piniaPluginPersistedstate);
 export default store;
 
 import {defineStore} from 'pinia';
-import { } from '../../api/index';
+import { HistoryList,HistoryKpi,HistoryOnlineDays } from '../../api/index';
 import { showToast } from 'vant';
 
 
@@ -17,7 +17,14 @@ const params = {
   site: 'VCTZ',
   shop: 'LQB',
   oven_type: '',
-  // debug_time:'2023-10-20 00:08:08',
+  start:'2023-10-19 00:00:00',
+  end:'2023-12-09 00:00:00'
+};
+const params2 = {
+  site: 'VCTZ',
+  shop: 'LQB',
+  oven_type: '',
+
 };
 
 
@@ -25,63 +32,54 @@ const params = {
 export const useHistoryListStore = defineStore('historylist',{
   state: () => {
     return {
-      historyplan: [
-        { id: 1234, 
-          error:false,
-          site: 'VCTZ', 
-          shop: 'LQB', 
-          oven_type: 'EDO', 
-          plan_date: '2023-11-20',
-          pred_diff:"3",
-          pred_save:"30",
-          accept:true,
-        },
-        { id: 1235, 
-          error:false,
-          site: 'VCTZ', 
-          shop: 'LQB', 
-          oven_type: 'EDO', 
-          plan_date: '2023-11-21',
-          pred_diff:"4",
-          pred_save:"20",
-          accept:true,
-        },
-        { id: 1235, 
-          error:false,
-          site: 'VCTZ', 
-          shop: 'LQB', 
-          oven_type: 'EDO', 
-          plan_date: '2023-11-21',
-          pred_diff:"10",
-          pred_save:"13",
-          accept:true,
-        },
-        { id: 1235, 
-          error:true,
-          site: 'VCTZ', 
-          shop: 'LQB', 
-          oven_type: 'EDO', 
-          plan_date: '2023-11-21',
-          pred_diff:"10",
-          pred_save:"13",
-          accept:false,
-        },
-      ],
-
-
+     
+     historyplan:[],
+     historykpi:[],
+     historydays:[]
     }
   },
 
+
+
   getters: {
     getHistoryList: store=>store.historyplan,
+    getHistoryKpi: store=>store.historykpi,
+    getHistoryDays: store=>store.historydays
   },
 
   actions: {
+    async runHistory(oventype:string,start:string,end:string) {
+    params.oven_type=oventype
+    params.start = start
+    params.end = end
+    const res = await HistoryList(params);
+    const historydetail= res.historylist;
+    this.historyplan=historydetail
+  },
+    async runHistoryKpi(oventype:string,start:string,end:string) {
+      params.oven_type=oventype
+      params.start = start
+      params.end = end
+      const res = await HistoryKpi(params);
+      const historydetail= res.historykpi;
+      this.historykpi=historydetail
+    },
+    async runHistoryDays(oventype:string) {
+      params2.oven_type=oventype
+      const res = await HistoryOnlineDays(params2);
+      const historydetail= res.days;
+      this.historydays=historydetail
+      const date:string = this.historydays["StartDate"];
+      this.historydays["StartDate"]= date.slice(0,10);
+       
+    },
 
 
-    
-    
-  }})
+}
+
+
+
+})
 
 
 

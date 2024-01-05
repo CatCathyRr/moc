@@ -9,6 +9,7 @@ const router: Router = createRouter({
 });
 
 router.beforeEach(async (_to, _from, next) => {
+  
   next();
 });
 

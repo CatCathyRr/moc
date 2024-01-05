@@ -34,6 +34,7 @@ export const lang: langType = {
     
   },
   predict:{
+    
     phd:"Predicted heating time",
     // edoven: "ED Oven",
     pop: "precisely open prediction",
@@ -88,26 +89,30 @@ export const lang: langType = {
     savesucceed:"Saved successfully",
   },
   analysispage:{
-    choose:"Choose Date Range",
+    ph:"Predict history",
+    choose:"Choose date range",
     today:"Today",
     start:"Start",
     end:"End",
-    pr:"Performance report ",
+    pd:"Performance details",
     ovens:"Ovens",
     es:"Energy saving",
     aratio:"Acceptance ratio:",
     emt:"Error margin trend",
-    glfxd:"Go live for x days",
+    glfxd:"Successfully launched for ",
+    pfd:"Successfully predicting for ",
     areport:"Analysis report",
-    ph:"Prediction History",
+    pi:"Prediction indicators",
     ct:"Choose time",
     cdsid:"Input CDSID",
     edit:"Edit",
-    last7:"Last 7 days",
-    last30:"Last 30 days",
-    last3m:"Last 3 months",
-    latest7r:"Latest 7 days prediction result",
-    latest30r:"Latest 30 days prediction result",
+
+    kpi1:"Average difference(Absolute Value)",
+    kpi2:"Total saved time",
+    kpi3:"Model acceptance ratio",
+    kpi4:"Error/total predictions",
+    
+    st:"TimeSaved",
     latest3mr:"Latest 3 months prediction result",
     date:"Date",
     pt:"Predicted time",
@@ -117,16 +122,20 @@ export const lang: langType = {
     yes:"Yes",
     download:"Download",
     email:"Email",
-    result:"Result"
+    result:"Result",
+    infotitle:"Daily prediction details",
+    info1:"----------------Daily Result----------------",
+    info2:"-----------------Data Check----------------",
+    info3:"----------------User Feedback---------------",
+    AcceptYes:"Accepted",
+    AcceptNo:"Not accepted",
+    AcceptNull:"No feedback from user",
+    Reasonis:"The reason is: "
+    
   },
-  week:{
-    mon:"Mon",
-    tue:"Tue",
-    wed:"Wed",
-    thu:"Thu",
-    fri:"Fri",
-    sat:"Sat",
-    sun:"Sun",
+  unit:{
+    day:" days",
+    min:" mins"
+
   }
-  
 };

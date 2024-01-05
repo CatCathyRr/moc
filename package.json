@@ -17,6 +17,7 @@
     "@icon-park/vue-next": "^1.4.2",
     "@nutui/icons-vue": "^0.1.1",
     "@nutui/nutui": "^4.1.0",
+    "@vant/weapp": "^1.11.1",
     "@varlet/ui": "^2.12.2",
     "@vueuse/core": "^10.4.1",
     "@vueuse/integrations": "10.2.1",

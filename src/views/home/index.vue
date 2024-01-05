@@ -165,6 +165,7 @@ switch (state.status) {
     state.showstatus= 1;
     
   });
+  
 
 </script>
 <style lang="scss" scoped>

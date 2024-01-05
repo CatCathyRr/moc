@@ -84,26 +84,28 @@ export type langType = {
     savesucceed:string;
   };
   analysispage:{
+    ph:string;
     choose:string;
     today:string;
     start:string;
     end:string;
-    pr:string;
+    pd:string;
     ovens:string;
     es:string;
     aratio:string;
     emt:string;
     glfxd:string;
+    pfd:string;
     areport:string;
-    ph:string;
+    pi:string;
     ct:string;
     cdsid:string;
     edit:string;
-    last7:string;
-    last30:string;
-    last3m:string;
-    latest7r:string;
-    latest30r:string;
+    kpi1:string;
+    kpi2:string;
+    kpi3:string;
+    kpi4:string;
+    st:string;
     latest3mr:string;
     date:string;
     pt:string;
@@ -114,14 +116,17 @@ export type langType = {
     download:string;
     email:string;
     result:string;
+    infotitle:string;
+    info1:string;
+    info2:string;
+    info3:string;
+    AcceptYes:string;
+    AcceptNo:string;
+    AcceptNull:string;
+    Reasonis:string;
   };
-  week:{
-    mon:string;
-    tue:string;
-    wed:string;
-    thu:string;
-    fri:string;
-    sat:string;
-    sun:string;
+  unit:{
+    day:string;
+    min:string
   }
 };

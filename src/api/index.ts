@@ -83,3 +83,22 @@ export function DeletePlanData(data) {
     headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZHNpZCI6IlpUQU5HMjYiLCJ0YWdzIjoiTU9DX0FQUF8iLCJleHBpcmVfdGltZSI6IjIwMjQtMDEtMjcgMDI6MjI6MjUifQ.axgRtRzdaqyw_6S-N9k8i8U3ZggSaVTG1ENoXxWjFBU' },
   });
 }
+
+export function HistoryList(data) {
+  return http.get(`/api/historylist`, {
+    params: data,
+    headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZHNpZCI6IlpUQU5HMjYiLCJ0YWdzIjoiTU9DX0FQUF8iLCJleHBpcmVfdGltZSI6IjIwMjQtMDEtMjcgMDI6MjI6MjUifQ.axgRtRzdaqyw_6S-N9k8i8U3ZggSaVTG1ENoXxWjFBU' },
+  });
+}
+export function HistoryKpi(data) {
+  return http.get(`/api/historylist/kpi`, {
+    params: data,
+    headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZHNpZCI6IlpUQU5HMjYiLCJ0YWdzIjoiTU9DX0FQUF8iLCJleHBpcmVfdGltZSI6IjIwMjQtMDEtMjcgMDI6MjI6MjUifQ.axgRtRzdaqyw_6S-N9k8i8U3ZggSaVTG1ENoXxWjFBU' },
+  });
+}
+export function HistoryOnlineDays(data) {
+  return http.get(`/api/historylist/onlinedays`, {
+    params: data,
+    headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjZHNpZCI6IlpUQU5HMjYiLCJ0YWdzIjoiTU9DX0FQUF8iLCJleHBpcmVfdGltZSI6IjIwMjQtMDEtMjcgMDI6MjI6MjUifQ.axgRtRzdaqyw_6S-N9k8i8U3ZggSaVTG1ENoXxWjFBU' },
+  });
+}
